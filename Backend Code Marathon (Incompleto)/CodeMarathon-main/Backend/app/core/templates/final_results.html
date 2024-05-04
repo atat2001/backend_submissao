@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Materialize CSS-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <title>CodeMarathon Final Leet Results</title>
+  <style>
+    body {
+      background-color: #121212;
+    }
+    h4 {
+      padding-top: 20px;
+      margin-bottom: 0px;
+    }
+    h1 {
+      margin-top: 0px;
+    }
+    .container {
+      background-color: #2f0404;
+      padding: 50px;
+      padding-top: 0px;
+      margin-top: 10px;
+      border-radius: 15px;
+      color: #f9da7b;
+    }
+    .collapsible {
+      width: 80%;
+      margin: auto
+    }
+    .collapsible-header {
+      background-color: #440404;
+      display: block !important;
+    }
+    .right-align {
+      float: right;
+    }
+    .first {
+      width: 15%;
+    }
+    .second {
+      width: 85%;
+    }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <h4>CodeMarathon 2023</h4>
+    <h1>FINAL LEET RESULTS</h1>
+    <ul class="collapsible">
+      {% for record in data %}
+      <li>
+        <div class="collapsible-header">
+          Group "{{ record.name }}" | {{ record.number }} (id={{ record.group }})
+          <span class="right-align">SCORE: {{ record.total_score }}</span>
+        </div>
+        <div class="collapsible-body">
+          <table>
+            <thead>
+              <tr>
+                <th class="first">Challenge ID</th>
+                <th class="second">Result</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for row in record.results %}
+              <tr>
+                <td class="first">{{ row.challenge }}</td>
+                <td class="second">
+                  {% if row.result == "P" %}
+                    PASSED
+                  {% elif row.result == "I" %}
+                    INCOMPLETE
+                  {% elif row.result == "N" %}
+                    NOT SUBMITTED
+                  {% endif %}
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    M.AutoInit();
+  </script>
+</body>
+</html>

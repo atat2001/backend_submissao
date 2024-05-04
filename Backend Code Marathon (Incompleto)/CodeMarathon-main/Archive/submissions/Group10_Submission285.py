@@ -1,0 +1,1 @@
+n = print(int(input(),7))

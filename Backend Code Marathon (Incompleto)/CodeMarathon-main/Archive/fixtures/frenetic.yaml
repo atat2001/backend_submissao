@@ -1,0 +1,520 @@
+- model: challenges.Challenge
+  pk: null
+  fields:
+    name: "Frenetic 1"
+    type: L
+    value: 1
+    question: |
+      <p class="text-justify">
+        Dado um número <code>n</code> composto por dígitos, devolve o número
+        total de paridade entre os dígitos do número.<br>
+        Um par <code>(x,y)</code> é contado para a paridade se
+        <code>n[x] == n[y]</code> e se <code>x &lt; y</code>.
+      </p>
+      <p class="text-justify">
+        Ex:<br>
+        <b>Input:</b><br>
+        123133<br>
+        <b>Output:</b><br>
+        4
+      </p>
+    tests: |
+      {
+        "123133": "4",
+        "1111": "6",
+        "11212": "4",
+        "12345": "0"
+      }
+
+
+- model: challenges.Challenge
+  pk: null
+  fields:
+    name: "Frenetic 2"
+    type: L
+    value: 1
+    question: |
+      <p class="text-justify">
+        Um frase é constítuida por várias palavras separadas por espaços. Uma
+        frase baralhada é tal que cada palavra tem um index correspondente na
+        frase.<br>
+        Dada uma frase baralhada, devolve a frase corrigida.
+      </p>
+      <p class="text-justify">
+        Ex:<br>
+        <b>Input:</b><br>
+        e2frase4Isto1uma3<br>
+        <b>Output:</b><br>
+        Isto e uma frase
+      </p>
+    tests: |
+      {
+        "e2frase4Isto1uma3": "Isto e uma frase",
+        "frase2e3Uma1frase5uma4": "Uma frase e uma frase",
+        "frase1frase2": "frase frase",
+        "Frase2simples1": "simples Frase"
+      }
+
+
+- model: challenges.Challenge
+  pk: null
+  fields:
+    name: "Frenetic 3"
+    type: L
+    value: 1
+    question: |
+      <p class="text-justify">
+        Teclas presas acontecem no dia-a-dia. Para resolver misstypes, vamos
+        criar um sistema de pesquisa infalível a estes casos. Recebe um input
+        que contem uma palavra correta e uma palavra misstyped e devolve se a
+        palavra misstyped pode ser aceite pelo sistema. O objetivo é verificar
+        se há letras duplicadas que não deviam existir.
+      </p>
+      <p class="text-justify">
+        Ex:<br>
+        <b>Input:</b><br>
+        joana,jooanna<br>
+        <b>Output:</b><br>
+        true //Nota: deve ser impressa a string "true"<br>
+        <br>
+        <b>Input:</b><br>
+        joana,joonna<br>
+        <b>Output:</b><br>
+        false //Nota: deve ser impressa a string "false"
+      </p>
+    tests: |
+      {
+        "joana,jooanna": "true",
+        "alberto,albertozinho": "false",
+        "artur,artur": "true",
+        "joao,jo4o": "false"
+      }
+
+
+- model: challenges.Challenge
+  pk: null
+  fields:
+    name: "Frenetic 4"
+    type: L
+    value: 1
+    question: |
+      <p class="text-justify">
+        Queremos enviar um navegador para o fundo do mar, contudo, devido à
+        natureza humana será precisará de reduzir a pressao a cada 10 metros.
+        Para sabermos quando devemos alertar o mergulhador receberemos um
+        input que contem a posicao dele a cada minuto e se foi realizada (P)
+        ou nao (N) a despressurização e devemos devolver o conjunto de minutos
+        em que de acordo com as regras o mergulhador deverá
+        despressurarizar-se. Assim o objetivo é garantir que a cada 10 metros
+        de diferença desde a ultima despressurização o nosso mergulhador é
+        avisado para voltar a despressurizar.
+      </p>
+      <p class="text-justify">
+        Ex:<br>
+        <b>Input:</b><br>
+        10(P),14(N),15(P),22(P),32(N),42(N),28(P)<br>
+        <b>Output:</b><br>
+        [5,6]<br>
+        <br>
+        <b>Input:</b><br>
+        2(P),14(N),4(P),12(P),20(N),22(N),20(P),14(N),8(N)<br>
+        <b>Output:</b><br>
+        [2,5,9]
+      </p>
+
+    tests: |
+      {
+        "10(P),20(N),18(N),30(P),25(N),30(N),45(N),40(P)": "[2,7]",
+        "2(P),8(N),18(N),30(N),25(N),30(N),45(N),40(P)": "[3,4,7]",
+        "2(P),8(N),18(N),30(N),25(N),30(N),45(N),40(P),60(N),70(P),25(N)": "[3,4,7,9,10,11]",
+        "2(N),10(P),18(N),28(N),25(N),30(N),45(N),40(P),60(N),70(P),25(N)": "[4,9,10]"
+      }
+
+
+- model: challenges.Challenge
+  pk: null
+  fields:
+    name: "Frenetic 5"
+    type: L
+    value: 1
+    question: |
+      <p class="text-justify">
+        A crise de gás afetou os preços médios para aquecer uma casa. Como
+        tal, temos de fazer uma otimização no aquecimento das casas
+        portuguesas.<br>
+        Considera um input de <code>casas = x1,x2</code> e casas onde
+        existem aquecedores <code>xn1,xn2...</code>. Diz qual a potência
+        mínima dos aquecedores para que todas as casas sejam aquecidas,
+        sendo que 1 unidade de potência aquivale 1 casa de distância de
+        aquecimento.
+      </p>
+      <p class="text-justify">
+        Ex:<br>
+        <b>Input:</b><br>
+        1,4 2,3<br>
+        <b>Output:</b><br>
+        1<br>
+        <br>
+        <b>Input:</b><br>
+        1,5 2<br>
+        <b>Output:</b><br>
+        3
+      </p>
+    tests: |
+      {
+        "1,5 2": "3",
+        "1,2 1": "1",
+        "1,10 5,7,8,9": "4"
+      }
+
+
+- model: challenges.Challenge
+  pk: null
+  fields:
+    name: "Frenetic 6"
+    type: L
+    value: 1
+    question: |
+      <p class="text-justify">
+        Estás numa viagem de comboio e decides viver uma aventura. Vais saltar
+        carruagens. Recebes um número onde o index indica a carruagem onde te
+        situas, e o dígito a quantidade de carruagens que consegues "saltar"
+        de uma vez. Se o dígito for 3, podes saltar 3 ou menos carruagens para
+        a frente (andar 3 ou menos unidades no index). 123 podes saltar 1
+        carruagem na carruagem 1, 2 carruagens na carruagem 2 e 3 carruagens
+        na carruagem 3. Dado esse número, diz se é possível ou não chegar à
+        última carruagem.
+      </p>
+      <p class="text-justify">
+        Ex:<br>
+        <b>Input:</b><br>
+        32101<br>
+        <b>Output:</b><br>
+        false //Nota: deve ser impressa a string "false" ou "true"
+      </p>
+    tests: |
+      {
+        "32101": "false",
+        "1234": "true",
+        "2201": "true ",
+        "110345": "false"
+      }
+
+
+- model: challenges.Challenge
+  pk: null
+  fields:
+    name: "Frenetic 7"
+    type: L
+    value: 1
+    question: |
+      <p class="text-justify">
+        O Homer Simpson está de serviço na sua central núclear.<br>
+        À sua frente tem 3 botões (Vermelho, Azul e Amarelo).<br>
+        Quando há uma emergência, os níveis de radioactividade (que no estado
+        normal são 0) começam a aumentar e o Homer tem de resolver o problema.
+        <ul class="browser-default">
+          <li>
+            Cada vez que o Homer clica no botão Vermelho a radiactividade
+            baixa 1 unidade.
+          </li>
+          <li>
+            Cada vez que o Homer clica no botão Azul a radiactividade baixa 3
+            unidades.
+          </li>
+          <li>
+            Cada vez que o Homer clica no botão Amarelo a radiactividade baixa
+            11 unidades.
+          </li>
+        </ul>
+        Receba como input um int com o nível de radioactividade da sala e
+        devolva um int com o número MÍNIMO de botões a ser clicado para o
+        nível de radioactividade voltar a 0.
+      </p>
+      <p class="text-justify">
+        Ex:<br>
+        <b>Input:</b><br>
+        39<br>
+        <b>Output:</b><br>
+        5<br>
+        <br>
+        <b>Input:</b><br>
+        23<br>
+        <b>Output:</b><br>
+        3
+      </p>
+    tests: |
+      {
+        "39": "5",
+        "0": "0",
+        "8": "4",
+        "100": "10"
+      }
+
+
+- model: challenges.Challenge
+  pk: null
+  fields:
+    name: "Frenetic 8"
+    type: L
+    value: 1
+    question: |
+      <p class="text-justify">
+        Uma rua tem 7 casas. As casas podem ter as luzes acesas (1) ou
+        apagadas (0). Todas as noites, as casas da rua acendem/apagam as suas
+        luzes consoante as seguintes regras:
+        <ul class="browser-default">
+          <li>
+            Se as duas casas vizinhas tiverem a luz acesa ou ambas apagadas,
+            a casa acende a luz;
+          </li>
+          <li>Caso conrário, apaga a luz.</li>
+        </ul>
+        Recebendo um input do tipo <code>1010101 n</code>, onde o index
+        representa o número da casa, o 1/0 se a luz da respetiva casa está
+        ligada/desligada e n o número de noites a iterar. Devolve o estado
+        das casas passados n noites.
+      </p>
+      <p class="text-justify">
+        Ex:<br>
+        <b>Input:</b><br>
+        1010101 2<br>
+        <b>Output:</b><br>
+        0011100
+      </p>
+    tests: |
+      {
+        "1010101 2": "0011100",
+        "1111111 0": "1111111",
+        "0000000 4": "0101010"
+      }
+
+
+- model: challenges.Challenge
+  pk: null
+  fields:
+    name: "Frenetic 9"
+    type: L
+    value: 1
+    question: |
+      <p class="text-justify">
+        Recebendo um inteiro devolve o algorismo repetido mais vezes dentro do
+        mesmo.
+      </p>
+      <p class="text-justify">
+        Ex:<br>
+        <b>Input:</b><br>
+        1223415555632<br>
+        <b>Output:</b><br>
+        5
+      </p>
+    tests: |
+      {
+        "111112536984": "1",
+        "12121211212121": "1",
+        "5252525235": "5",
+        "6444433": "4"
+      }
+
+
+- model: challenges.Challenge
+  pk: null
+  fields:
+    name: "Frenetic 10"
+    type: L
+    value: 1
+    question: |
+      <p class="text-justify">
+        Transforma o input dado num valor de base 7.
+      </p>
+      <p class="text-justify">
+        Ex:<br>
+        <b>Input:</b><br>
+        200<br>
+        <b>Output:</b><br>
+        404
+      </p>
+    tests: |
+      {
+        "200": "404",
+        "0": "0",
+        "-10": "-13",
+        "-1": "-1"
+      }
+
+
+- model: challenges.Challenge
+  pk: null
+  fields:
+    name: "Frenetic 11"
+    type: L
+    value: 1
+    question: |
+      <p class="text-justify">
+        A central de tratamento de aguas do taguspark esta com problemas no
+        abastecimento devido a uma fuga num dos canos. De modo a conseguir
+        encontrar a fuga (local onde deveriamos encontrar um cano 1 e
+        encontramos um 0) pediram que procurá-se-mos no mapa que nos foi
+        transmitido pelo dito tubo. Para tal iremos receber um mapa com os
+        tudos de agua onde podem exististem os problemas e devemos retornar a
+        posicao no mapa onde a fuga se encontra.<br>
+        A primeira linha de input será o número de linhas do mapa.
+      </p>
+      <p class="text-justify">
+        Ex:<br>
+        <b>Input:</b><br>
+        5<br>
+        0001000<br>
+        0001000<br>
+        0000000<br>
+        0001000<br>
+        0001000<br>
+        <b>Output:</b><br>
+        (3,2)<br>
+        <br>
+        <b>Input:</b><br>
+        5<br>
+        1000000<br>
+        0100000<br>
+        0010000<br>
+        0000000<br>
+        0000100<br>
+        <b>Output:</b><br>
+        (3,3)
+      </p>
+    tests: |
+      {
+        "3\n000010\n000010\n000000": "(4,2)",
+        "4\n1000\n0000\n0010\n0001": "(1,1)",
+        "4\n00010\n00100\n01000\n00000": "(0,3)",
+        "6\n000000\n010000\n001000\n000100\n000010\n000001": "(0,0)"
+      }
+
+
+- model: challenges.Challenge
+  pk: null
+  fields:
+    name: "Frenetic 12"
+    type: L
+    value: 1
+    question: |
+      <p class="text-justify">
+        Analisando os seguintes exemplos de input/output, encontra o padrão e
+        desenvolve um algoritmo para o mesmo.
+      </p>
+      <p class="text-justify">
+        Ex:<br>
+        <b>Input:</b><br>
+        5,4,5<br>
+        <b>Output:</b><br>
+        4<br>
+        <br>
+        <b>Input:</b><br>
+        1,1,0,1<br>
+        <b>Output:</b><br>
+        0<br>
+        <br>
+        <b>Input:</b><br>
+        7,2,1,2,7<br>
+        <b>Output:</b><br>
+        1<br>
+        <br>
+        <b>Input:</b><br>
+        6,6,6,6,2,3<br>
+        <b>Output:</b><br>
+        (2,3)<br>
+        <br>
+        <b>Input:</b><br>
+        6,6,6,6,3,2,4<br>
+        <b>Output:</b><br>
+        (3,2,4)
+      </p>
+    tests: |
+      {
+        "5,4,5,4,3": "3",
+        "5,5,5,3": "3",
+        "2,2,3,4,1,3,4,9,2": "(1,9)",
+        "3,2,2,2,4,5": "(3,4,5)"
+      }
+
+
+- model: challenges.Challenge
+  pk: null
+  fields:
+    name: "Frenetic 13"
+    type: L
+    value: 1
+    question: |
+      <p class="text-justify">
+        De modo a personalizar o ecrã pretendemos criar um programa que
+        recebendo um inteiro e um caracter no formato (inteiro, caracter), vá
+        desenhar a pirâmide invertida cujo número de elementos da base é igual
+        ao inteiro recebido e os caracteres de desenho são iguais ao
+        fornecido.<br>
+        Nota: Apenas são permitidos os seguintes caracteres:
+        !,?,%,&amp;,@,&gt;. Caso não seja possível construir a pirâmide, devolve
+        "false".
+      </p>
+      <p class="text-justify">
+        Ex:<br>
+        <b>Input:</b><br>
+        6,&gt<br>
+        <b>Output:</b><br>
+        false<br>
+        <br>
+        <b>Input:</b><br>
+        5,@<br>
+        <b>Output:</b><br>
+        @@@@@<br>
+        @@@@<br>
+        @@@<br>
+        @@<br>
+        @<br>
+      </p>
+    tests: |
+      {
+        "6,<": "false",
+        "9,&": "&&&&&&&&&\n&&&&&&&&\n&&&&&&&\n&&&&&&\n&&&&&\n&&&&\n&&&\n&&\n&",
+        "2,$": "false",
+        "3,?": "???\n??\n?"
+      }
+
+
+- model: challenges.Challenge
+  pk: null
+  fields:
+    name: "Frenetic 14"
+    type: L
+    value: 1
+    question: |
+      <p class="text-justify">
+        A Ana têm um cãozinho chamado Scooby e sempre se questionou qual seria
+        a sua idade comparada à do seu cãozinho.<br>
+        Recebes três inteiros que representam datas no formato:<br>
+        DDMMAAAA,DDMMAAAA,DDMMAAAA<br>
+        Com a seguinte legenda:
+        <ul class="browser-default">
+          <li>DD - Dia</li>
+          <li>MM - Mês</li>
+          <li>AAAA - Ano</li>
+        </ul>
+        Esses inteiros são respectivamente a data de nascimento da Ana, a data
+        de nascimento do Scooby e a data do dia atual.<br>
+        Considerando que 1 ano cão equivale a 7 anos humanos, devolve como
+        output "true" se a Ana é mais velha que o Scooby ou "false" se o
+        contrário.
+      </p>
+      <p class="text-justify">
+        Ex:<br>
+        <b>Input:</b><br>
+        21012000,25032019,11032022<br>
+        <b>Output:</b><br>
+        true
+      </p>
+    tests: |
+      {
+        "29032001,25032018,11032022": "false",
+        "14022022,14022022,14032022": "false",
+        "20021908,14022022,14032022": "true",
+        "24061973,13042020,15032022": "true"
+      }

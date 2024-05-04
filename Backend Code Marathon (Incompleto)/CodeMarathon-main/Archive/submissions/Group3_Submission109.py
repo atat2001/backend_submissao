@@ -1,0 +1,15 @@
+user_input = input()
+
+carros = []
+for l in user_input.split("\n")[1:]:
+    if "aceitarCarro" in l:
+        carros.append(l.split(" ")[-1])
+    if "sairCarro" in l:
+        carros.remove(l.split(" ")[-1])
+
+s = ""
+s+=str(len(carros))+"\n"
+for c in carros:
+    s+=c+"\n"
+
+print(s)

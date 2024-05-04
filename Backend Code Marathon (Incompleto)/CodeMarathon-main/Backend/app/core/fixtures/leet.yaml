@@ -1,0 +1,467 @@
+- model: challenges.Challenge
+  pk: null
+  fields:
+    name: "Problema 1: Parques Artur"
+    type: L
+    value: 3
+    question: |
+      <p class="text-justify">
+        O senhor Artur tem um parque de estacionamento que quer rentabilizar.
+        Para tal, irá criar um sistema que deixe as pessoas alugarem lugares.
+        Cria 2 estruturas de dados/classes: ParqueEstacionamento e Carro. O
+        parque de estacionamento será constituído por Carro. Cada carro tem
+        de ter: (int)matrícula, (bool) EmUso. Métodos do ParqueEstacionamento:
+        aceitarCarro, rejeitarCarro, alterarEstadoCarro. O parque de
+        estacionamento tem um limite de 5 lugares.<br>
+        <ul class="browser-default">
+          <li>
+            aceitarCarro -> adicionar um novo carro ao array de carros
+            (implica criação).
+          </li>
+          <li>
+            rejeitarCarro -> se o estacionamento estiver cheio, não é permitida
+            a entrada de novos carros.
+          </li>
+          <li>
+            alterarEstadoCarro -> caso o carro saia do estacionamento, o seu
+            estado fica inativo(false). Se o carro já estiver registado no
+            sistema e voltar a entrar no parque, não é criado um novo carro,
+            mas este passa a ativo.
+          </li>
+        </ul>
+      </p>
+      <p class="text-justify">
+        No final, o código irá dizer quantos carros estão, e quais as suas
+        matrículas.<br>
+        O input será dadp com uma instrução por linha. Na primeira linha o
+        número de instruções, nas restantes as instruções.<br>
+        Ex:<br>
+        <b>Input:</b><br>
+        11<br>
+        aceitarCarro - 44-YH-66<br>
+        aceitarCarro - 44-YH-67<br>
+        aceitarCarro - 44-YH-68<br>
+        aceitarCarro - 44-YH-69<br>
+        aceitarCarro - 44-YH-70<br>
+        aceitarCarro - 44-YH-81<br>
+        aceitarCarro - 44-YH-66<br>
+        sairCarro - 44-YH-66<br>
+        aceitarCarro - 44-YH-81<br>
+        sairCarro - 44-YH-67<br>
+        aceitarCarro - 44-YH-66<br>
+        <br>
+        <b>Output:</b><br>
+        5<br>
+        44-YH-66<br>
+        44-YH-68<br>
+        44-YH-69<br>
+        44-YH-70<br>
+        44-YH-81<br>
+      </p>
+    tests: |
+      {
+        "11\naceitarCarro - 44-YH-66\naceitarCarro - 44-YH-67\naceitarCarro - 44-YH-68\naceitarCarro - 44-YH-69\naceitarCarro - 44-YH-70\naceitarCarro - 44-YH-81\naceitarCarro - 44-YH-66\nsairCarro - 44-YH-66\naceitarCarro - 44-YH-81\nsairCarro - 44-YH-67\naceitarCarro - 44-YH-66": "5\n44-YH-66\n44-YH-68\n44-YH-69\n44-YH-70\n44-YH-81",
+        "3\naceitarCarro - 00-AA-00\naceitarCarro - 00-AA-01\naceitarCarro - 00-AA-01": "2\n00-AA-00\n00-AA-01",
+        "4\naceitarCarro - 12-BB-10\nsairCarro - 12-BB-10\naceitarCarro - 12-BB-10\naceitarCarro - 12-BB-11": "2\n12-BB-10\n12-BB-11"
+      }
+
+
+- model: challenges.Challenge
+  pk: null
+  fields:
+    name: "Problema 2: Jogo do Tozé"
+    type: L
+    value: 3
+    question: |
+      <p class="text-justify>
+        Farto de estar sempre a jogar à bola e às cartas, e sendo uma pessoa com
+        uma paixão pela matemática, o Tozé decidiu criar um novo jogo: o jogo do
+        Tozé. Foi buscar un galhos ao jardim e pô-los num monte em cima da
+        mesa. Disse então o seguinte:
+        <ul class="browser-default">
+          <li>Jogamos um à vez e eu começo sempre;</li>
+          <li>Cada um pode tirar entre 1 a 3 galhos por jogada;</li>
+          <li>Quem tirar o último galho ganha.</>
+        </ul>
+      </p>
+      <p class="text-justify">
+        Com base nos galhos iniciais dados pelo input, determina se vais ganhar
+        (vencedor) o jogo contra o Tozé ou se vais perder (perdedor).<br>
+        Ex:<br>
+        <b>Input:</b><br>
+        4<br>
+        <b>Output:</b><br>
+        vencedor<br>
+      </p>
+    tests: |
+      {
+        "4": "vencedor",
+        "10": "perdedor",
+        "100": "vencedor"
+      }
+
+- model: challenges.Challenge
+  pk: null
+  fields:
+    name: "Problema 3: Vindimas"
+    type: L
+    value: 3
+    question: |
+      <p class="text-justify">
+        A Joana tem uma quinta que produz uva. No fim do verão é feita a
+        apanha da fruta. Infelizmente este ano, não houve pessoas a querer
+        fazer a apanha. As enconstas onde a vinha está são inclinadas e por
+        isso apenas a fruta que ficou presa nos sulcos de terra pode ser
+        apanhada.<br>
+        Considera um número que vá representar os sulcos ao longo da encosta
+        da quinta num gráfico de barras (0-9) com espessura de 1 por barra.
+        Sendo que em cada buraco 1x1 guarda 100 uvas. Quantas centenas de uvas
+        consegue a Joana reter na sua quinta?
+      </p>
+      <img src="assets/challenges/leet_3.png">
+      <p class="text-justify">
+        Ex:<br>
+        <b>Input:</b><br>
+        010210132121<br>
+        <b>Output:</b><br>
+        6<br>
+      </p>
+    tests: |
+      {
+        "010210132121": "6",
+        "212": "1",
+        "010": "0"
+      }
+
+- model: challenges.Challenge
+  pk: null
+  fields:
+    name: "Problema 4: Paisagem"
+    type: L
+    value: 3
+    question: |
+      <p class="text-justify">
+        Queres pintar a paisagem que vês da janela, mas como somos
+        informáticos e não temos muito jeito para o desenho, queremos começar
+        já com um esboço. Considera um input dado por uma string com uma
+        sequência de números onde cada número tem 3 dígitos: o 1º dá o início
+        de um prédio numa reta numerada, o 2º a altura do prédio e o 3º o fim
+        do prédio. O objetivo é devolver uma string com o par de coordenadas
+        xy de todos os pontos de ligação por ordem.
+      </p>
+      <img src="assets/challenges/leet_4.png">
+      <p class="text-justify">
+        Ex:<br>
+        <b>Input:</b><br>
+        182,153,449<br>
+        <b>Output:</b><br>
+        10,18,28,25,35,30,40,44,94,90<br>
+      </p>
+    tests: |
+      {
+        "182,153,449": "10,18,28,25,35,30,40,44,94,90",
+        "123,245,416,819": "10,12,22,24,54,51,61,60,80,81,91,90",
+        "123": "10,12,32,30"
+      }
+
+
+- model: challenges.Challenge
+  pk: null
+  fields:
+    name: "Problema 5: Combustível"
+    type: L
+    value: 3
+    question: |
+      <p class="text-justify">
+        O João é dono de uma empresa de transportes. Com o aumento do preço
+        dos combustíveis, é necessário fazer uma atualização às rotas de
+        abastecimento dos veículos. Considera um input com o número de linhas
+        a receber, o objetivo final da viagem em kilómetros, o combustível
+        inicial em kilómetros e um posto de combustível por linha, com o
+        kilómetro onde se encontra e o combustível que tem para oferecer.<br>
+        Descobre o número mínimo de paragens que um camião tem de fazer,
+        consoante o input dado.<br>
+        No caso de não ser possível chegar ao destino, o resultado é -1.
+      </p>
+      <p class="text-justify">
+        Ex:<br>
+        <b>Input:</b><br>
+        4<br>
+        100<br>
+        50<br>
+        20,50<br>
+        70,10<br>
+        <b>Output:</b><br>
+        1<br>
+      </p>
+
+    tests: |
+      {
+        "4\n100\n50\n20,50\n70,10": "1",
+        "3\n1\n2\n0,0": "0",
+        "5\n200\n20\n10,100\n20,20\n120,100": "3"
+      }
+
+
+- model: challenges.Challenge
+  pk: null
+  fields:
+    name: "Problema 6: Notas"
+    type: L
+    value: 3
+    question: |
+      <p class="text-justify">
+        A competitividade no técnico está sempre presente. Como tal, a
+        atribuição de notas não é feita com base em critérios mas em base de
+        comparação. Tendo cada aluno a sua própria classificação (1-9) indica
+        qual o valor mínimo da soma das notas de todos os alunos, seguindo
+        estas duas regras:
+        <ul class="browser-default">
+          <li>Um aluno tem como nota mínima 1 valor;</li>
+          <li>
+            Dado um input representativo de uma fila de alunos com a sua
+            respetiva classificação, um aluno com uma classificação mais alta
+            tem necessariamente de ter uma nota mais alta que os seus alunos
+            vizinhos na fila.
+          </li>
+        </ul>
+      </p>
+      <p class="text-justify">
+        Ex:<br>
+        <b>Input:</b><br>
+        2,1,3<br>
+        <b>Output:</b><br>
+        5<br>
+        <br>
+        <b>Input:</b><br>
+        1,3,2,2<br>
+        <b>Output:</b><br>
+        5<br>
+      </p>
+    tests: |
+      {
+        "2,1,3": "5",
+        "1,3,2,2": "5",
+        "9,8,9": "5"
+      }
+
+
+- model: challenges.Challenge
+  pk: null
+  fields:
+    name: "Problema 7: Jogo da cobra"
+    type: L
+    value: 3
+    question: |
+      <p class="text-justify">
+        Já todos jogámos o “Snake” quando éramos pequenos. Agora que somos
+        adolescentes, tentámos programá-lo mas o programa não saiu muito bem.
+        Acontece que quando a cobra se cruza sobre si própria, o jogo
+        continua. Para tentar corrigir o erro, vamos tentar perceber quantas
+        vezes a cobra se cruza a si própria. Considera que a cobra tem tamanho
+        infinito, cada vez que faz um movimento, roda no sentido contrário ao
+        do ponteiro dos relógios. O input será um vetor onde cada elemento
+        será o número de passos que a cobra dará nessa jogada.
+      </p>
+      <img src="assets/challenges/leet_7.png">
+      <p class="text-justify">
+        Ex:<br>
+        <b>Input:</b><br>
+        2,1,1,3<br>
+        <b>Output:</b><br>
+        1
+      </p>
+    tests: |
+      {
+        "2,1,1,2": "1",
+        "2,1,1,3,1,1,2": "2",
+        "1,1,4": "0"
+      }
+
+- model: challenges.Challenge
+  pk: null
+  fields:
+    name: "Problema 8: It's Over 9000!"
+    type: L
+    value: 3
+    question: |
+      <p class="text-justify">
+        Em busca do poder máximo, o medidor de potência foi partido e teremos
+        de arranjar um novo método para calcular o poder máximo. Considera 2
+        inteiros n1 e n2 com o poder de cada um dos lutadores. Para calcular o
+        poder máximo da batalha, teremos de criar o maior número possível de
+        acordo com as seguintes regras:
+        <ul class="browser-default">
+          <li>O novo número terá de ter um tamanho k dado no input.</li>
+          <li>
+            A ordem relativa dos dígitos de cada número tem de ser mantida.
+          </li>
+        </ul>
+      </p>
+      <p class="text-justify">
+        O input será do tipo n1,n2,k<br>
+        Ex:<br>
+        <b>Input:</b><br>
+        3456,912583,5<br>
+        <b>Output:</b><br>
+        98563
+      </p>
+    tests: |
+      {
+        "3456,912583,5": "98563",
+        "456,12,4": "4562",
+        "9000,0,5": "90000"
+      }
+
+- model: challenges.Challenge
+  pk: null
+  fields:
+    name: "Problema 9: 1’s e 0’s e 1’s e 0’s"
+    type: L
+    value: 3
+    question: |
+      <p class="text-justify">
+        Na procura pela velocidade de compilação, estivemos 5 anos a escrever
+        código binário e como efeito colatoral, agora só vemos 0’s e 1’s.
+        Considera um input de um inteiro e devolve a quantidade de 0’s e 1’s
+        presente em todos os números inteiros positivos iguais ou inferiores
+        ao input.
+      </p>
+      <p class="text-justify">
+        Ex:<br>
+        <b>Input:</b><br>
+        13<br>
+        <b>Output:</b><br>
+        7
+      </p>
+    tests: |
+      {
+        "13": "7",
+        "10": "3",
+        "100": "32"
+      }
+
+- model: challenges.Challenge
+  pk: null
+  fields:
+    name: "Problema 10: Desencriptação"
+    type: L
+    value: 3
+    question: |
+      <p class="text-justify">
+        Recebes um domínio de um url que vem encriptado e para o desencriptar
+        tens de perceber a sua chave. O domínio é composto por letras e
+        números, como é o caso de “scammer2abc2”. Para o desencriptar tens de
+        seguir as seguintes regras:
+        <ul class="browser-default">
+          <li>Sempre que lês uma letra copias a letra</li>
+          <li>
+            Sempre que vês um digito, voltas ao início do domínio e
+            desencriptas o domínio até esse ponto, o número de vezes escrito.
+          </li>
+        </ul>
+        No caso de “scammer2abc2” seria: "scammerscammerabcscammerscammerabc".<br>
+        O input terá um domínio e um número k. O objetivo será devolver o
+        caracter do domínio descodificado na posição k.
+      </p>
+      <p class="text-justify">
+        Ex:<br>
+        <b>Input:</b><br>
+        tecnico2ist3,24<br>
+        <b>Output:</b><br>
+        o
+      </p>
+    tests: |
+      {
+        "tecnico2ist3,24": "o",
+        "testE3,10": "E",
+        "1234a2,2": "a"
+      }
+
+
+- model: challenges.Challenge
+  pk: null
+  fields:
+    name: "Problema 11: Password Assistant"
+    type: L
+    value: 3
+    question: |
+      <p class="text-justify">
+        Com a renovação anual da password no fênix, queres fazer um assistente
+        de criação de passwords que identifique a “força” da tua password.
+        Como tal, a “força” da password pode ser medida com as seguintes
+        métricas:
+        <ul class="browser-default">
+          <li>
+            O número de caracteres tem de ser maior que 8 e no máximo 20;
+          </li>
+          <li>
+            Tem de ter no mínimo uma letra minúscula, uma letra maiúscula, um
+            número e um caracter especial(!,?,-,_,$,%,&);
+          </li>
+          <li>
+            Não pode ter 3 caracteres iguais seguidos e não pode ter mais do
+            que 5 carateres iguais em toda a palavra-passe.
+          </li>
+        </ul>
+        Considerando que um passo de alteração é:
+        <ul class="browser-default">
+          <li>Inserir um caracter;</li>
+          <li>Modificar um caracter;</li>
+          <li>Remover um caracter.</li>
+        </ul>
+        Dado como input uma palavra-passe, devolve o número mínimo de passos
+        de alteração até que a password seja “forte” o suficiente para
+        assegurar todas as métricas mencionadas.
+      </p>
+      <p class="text-justify">
+        Ex:<br>
+        <b>Input:</b><br>
+        tataaa<br>
+        <b>Output:</b><br>
+        4
+      </p>
+    tests: |
+      {
+        "tataaa": "4",
+        "a": "8",
+        "111111111": "4"
+      }
+
+
+- model: challenges.Challenge
+  pk: null
+  fields:
+    name: "Problema 12: Número Escolhido"
+    type: L
+    value: 3
+    question: |
+      <p class="text-justify">
+        Um número escolhido é tal que dados 3 números inteiros positivos,
+        verificam-se os seguintes casos:
+        <ul class="browser-default">
+          <li>
+            O número escolhido é um múltiplo do segundo ou do terceiro número
+            dado no input.
+          </li>
+          <li>
+            Numa lista de múltiplo do segundo e do terceito número, ordenada
+            por valores, o número escolhido ocupa a posição descrita pelo
+            primeiro número.
+          </li>
+        </ul>
+        O objetivo é identificar o número escolhido.
+      </p>
+      <p class="text-justify">
+        Ex:<br>
+        <b>Input:</b><br>
+        3,2,3<br>
+        <b>Output:</b><br>
+        4
+      </p>
+    tests: |
+      {
+        "3,2,3": "4",
+        "5,17,100": "85",
+        "6,5,25": "30"
+      }

@@ -1,0 +1,342 @@
+- model: challenges.Challenge
+  pk: null
+  fields:
+    name: Carteira/Conta Bancária Virtual
+    type: P
+    question: |
+      <p class="text-justify">
+        A empresa TechniBank pretende criar um serviço online que permite aos seus
+        clientes acederem a informações da sua conta bancária em tempo real
+        através de uma forma online.<br>
+        Como prestadores de serviços informáticos, o nosso objetivo é a criação de
+        uma plataforma que permita dar aos demais utilizadores, acesso às suas
+        informações de conta. Para além das informações básicas da conta, a
+        plataforma tem também de permitir fazer operações básicas de uma conta
+        bancária, como por exemplo transferências bancárias, trocas de moeda e
+        pagamentos de serviços.
+      </p>
+      <p>Requisitos básicos obrigatórios:</p>
+      <ul class="browser-default">
+        <li>Informação sobre a conta pessoal:</li>
+        <ul class="browser-default">
+          <li>Valor de € (Euro). <b>(2 pontos)</b></li>
+          <li>Valor de $ (Dolar). <b>(2 pontos)</b></li>
+          <li>Número de conta. <b>(2 pontos)</b></li>
+          <li>Tipo de conta: <b>(5 pontos)</b></li>
+          <ul class="browser-default">
+            <li>Normal;</li>
+            <li>Premium.</li>
+          </ul>
+          <li>Localidade: <b>(2 pontos)</b></li>
+          <ul class="browser-default">
+            <li>País.</li>
+          </ul>
+          <li>Informação do utilizador: <b>(5 pontos)</b></li>
+          <ul class="browser-default">
+            <li>Nome;</li>
+            <li>Email;</li>
+            <li>Nº de telefone.</li>
+          </ul>
+          <li>
+            Histórico contabílistico com o seguinte formato<sup>1</sup>:
+            <b>(15 pontos)</b>
+          </li>
+          <ul class="browser-default">
+            <li>
+              <code>“Name of the operation” --- (amount) - [YYYY/MM/DD]</code>
+            </li>
+          </ul>
+          <li>Transferências bancárias entre contas: <b>(15 pontos)</b></li>
+          <ul class="browser-default">
+            <li>Transferências normal: aplicação de uma taxa de 3%;</li>
+            <li>Transferência inter-continental: aplicação de uma taxa de 5%;</li>
+            <li>Transferêcnia premium<sup>2</sup>: taxa não aplicável.</li>
+          </ul>
+          <li>Pagamento de serviços: <b>(10 pontos)</b></li>
+          <ul class="browser-default">
+            <li>Pagamentos de serviços a certas empresas<sup>3</sup>.</li>
+          </ul>
+        </ul>
+      </ul>
+      <p class="text-justify">
+        Requisitos opcionais (avançados): <b>(a avaliação será por comparação aos
+        projetos concorrentes com o mesmo enunciado)</b>
+      </p>
+      <ul class="browser-default">
+        <li>
+          Criação de uma interface gráfica(ex. WebPage/JavaSwing/MobileApp);
+        </li>
+        <li>
+          Permitir adicionar outros tipos de moedas à conta do cliente (ex. cripto
+          ativos);
+        </li>
+        <li>
+          Criação de múltiplas contas bancárias por utilizador (ex. Conta pessoal
+          + Conta poupança);
+        </li>
+        <li>
+          Adicionar operações assíncronas entre contas (ex. 2 transferências em
+          simultâneo);
+        </li>
+        <li>
+          Opção de atualização de informações do cliente;
+        </li>
+        <li>
+          Utilização de “sockets” que permitam uma transferência com 2 contas
+          “ligadas” em simultâneo;
+        </li>
+        <li>
+          Implementação de uma base de dados.
+        </li>
+      </ul>
+      <p class="text-justify">
+        Para além das demais opções dadas como opcionais, poderás implementar
+        outras que aches relevantes e funcionais para o tipo de projeto pedido. A
+        criatividade faz parte do elemento de avaliação e como tal, nada será
+        excluído.
+      </p>
+      <p>
+        Adicionando à pontuação apresentada acima, existem ainda estes critérios:
+      </p>
+      <ul class="browser-default">
+        <li>Compilação sem erros; <b>(5 pontos)</b></li>
+        <li>Programa corre sem Runtime Error; <b>(15 pontos)</b></li>
+        <li>Documentação técnica; <b>(10 pontos)</b></li>
+        <li>Criação de testes; <b>(10 pontos)</b></li>
+        <ul class="browser-default">
+          <li>
+            Os testes terão de ser objetivos e abranger todas as funcionalidades
+            operacionais.
+          </li>
+        </ul>
+        <li>Qualidade de código. <b>(10 pontos)</b></li>
+      </ul>
+      <p>Teconolgias sugeridas:</p>
+      <ul class="browser-default">
+        <li>Backend:</li>
+        <ul class="browser-default">
+          <li>Java - Springboot, Micronaut, Quark</li>
+          <li>Node - Express, nextJS, emberJS</li>
+          <li>.Net</li>
+          <li>C/C++</li>
+          <li>Python - Django, Flask</li>
+        </ul>
+        <li>Frontend:</li>
+        <ul class="browser-default">
+          <li>Vanilla JS/HTML/CSS</li>
+          <li>MVC</li>
+          <li>Angular</li>
+          <li>React</li>
+          <li>Vue</li>
+          <li>Svelt</li>
+        </ul>
+      </ul>
+      <p class="text-justify">
+        <sup>1</sup>A data inicial é 2022/01/01. Sempre que é feita uma operação
+        contabilística (transferência/pagamento), o dia deverá ser incrementado.
+        Por outro lado, também se poderá utilizar uma library de datas desde que
+        o histórico passe a ter yyyy-mm-dd hh-mm-ss.
+      </p>
+      <p class="text-justify">
+        <sup>2</sup>A taxa é ignorada sempre que uma conta premium faça uma
+        transferência para qualquer outro tipo de conta (seja esta no mesmo país
+        ou não).
+      </p>
+      <p class="text-justify">
+        <sup>3</sup>No pagamento a empresas, o id da empresa deverá ser um número
+        aleatório de 8 dígitos gerado no momento do pagamento.
+      </p>
+
+
+- model: challenges.Challenge
+  pk: null
+  fields:
+    name: Url Shortener
+    type: P
+    question: |
+        <style>
+          table#_table {
+            width: 80%;
+          }
+          #_table td {
+            width: 50%;
+          }
+        </style>
+        <p class="text-justify">
+          Todos nós já estivemos frustrados durante a inscrição nas disciplinas
+          com a dsi, devido aos problemas informáticos que tao bem conhecemos.
+          Quando tentamos ir ver os horários às cadeiras, deparamo-nos com links
+          com demasiada informação. Muitas vezes não é interessante que o
+          utilizador veja informações irrelevantes num link como por exemplo um
+          código ou um Id e também não é uma boa prática a partilha de URLs com
+          centenas de caracteres.<br>
+          Enquanto elementos da comunidade estudantil foi-nos atribuída a árdua
+          tarefa de criar um sistema de automação para a redução de url de modo
+          a facilitar a sua interpretação e pesquisa pelos alunos, permitindo
+          também aos docentes uma forma mais fácil para a sua criação.
+        </p>
+        <p>Requisitos básicos obrigatórios:</p>
+        <ul class="browser-default">
+          <li>Gerador de tokens(shortened url’s):</li>
+          <ul class="browser-default">
+            <li>
+              O token terá de ter um domínio/base que será igual para todos
+              (ex. shortyurl.ss). <b>(2 pontos)</b>
+            </li>
+            <li>Impedimento de conflitos. <b>(8 pontos)</b></li>
+            <ul class="browser-default">
+              <li>
+                Apesar de a solução nao ser colocada em teste no mundo real (pelo menos
+                neste ambiente inicial) é obrigatório que qualquer url dado, seja
+                compatível com todos os já criados anteriormente (durante a execução do
+                programa).
+              </li>
+            </ul>
+            <li>Validade do url shortned. <b>(8 pontos)</b></li>
+            <ul class="browser-default">
+              <li>
+                É estritamente necessário que qualquer GUID retornado pelo programa seja
+                utilizável num ambiente do mundo real, isto é, que seja válido. Como
+                tal, os chars permitidos serão: A-Z, a-z, 0-9, -, _, ~.
+              </li>
+            </ul>
+            <li>
+              A dimensao do url shortned nao deve ultrapassar os 30 caracteres
+              (incluindo o protocolo, ex. https://shortyurl.ss/gHuijhMh = 29).
+            </li>
+            <li>
+              Armazenar todos os tokens juntamente com a sua long version(url original).
+            </li>
+          </ul>
+          <li>Pesquisa na base de dados bi-direcional:</li>
+          <ul class="browser-default">
+            <li>Pesquisa e demostração de valores por palavras-chave:</li>
+            <ul class="browser-default">
+              <li>
+                Dado um token, terá de ser apresentado o seu url original:
+                <b>(8 pontos)</b>
+              </li>
+              <ul class="browser-default">
+                <li>
+                  Ex: Dado o token https://shortyurl.ss/gHuijhMh, é retornado os
+                  seguintes valores:
+                  <table id="_table">
+                    <tbody>
+                      <tr>
+                        <td>https://shortyurl.ss/gHuijhMh</td>
+                        <td>https://longversionurl.com/index/any-page/something-here</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </li>
+              </ul>
+              <li>
+                Dado um url ou parte dele, será retornado o token gerado, ou todos os
+                tokens onde parte do url original tenha as palavras-chave pesquisadas.
+                <b>(16 pontos)</b>
+              </li>
+              <ul class="browser-default">
+                <li>
+                  Ex: Dada a palavra-chave “any-page”, é retornado os seguintes
+                  valores:
+                  <table id="_table">
+                    <tbody>
+                      <tr>
+                        <td>https://longversionurl.com/index/<b>any-page</b>/something-here</td>
+                        <td>https://shortyurl.ss/gHuijhMh</td>
+                      </tr>
+                      <tr>
+                        <td>https://<b>any-page</b>.com/index/something-here</td>
+                        <td>https://shortyurl.ss/ddsGTy</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </li>
+              </ul>
+            </ul>
+          </ul>
+          <li>
+            Métricas de estatística:
+          </li>
+          <ul class="browser-default">
+            <li>
+              Deverão ser registadas e guardadas várias métricas de controlo, sendo
+              estas:
+            </li>
+            <ul class="browser-default">
+              <li>
+                Nº total de urls guardados. <b>(1 ponto)</b>
+              </li>
+              <li>
+                Leaderboard de palavras-chaves pesquisadas(palavras-chave pesquisadas
+                e número total de procuras para cada uma). <b>(9 pontos)</b>
+              </li>
+            </ul>
+          </ul>
+        </ul>
+        <p class="text-justify">
+          Requisitos opcionais (avançados): <b>(a avaliação será por comparação aos
+          projetos concorrentes com o mesmo enunciado)</b>
+        </p>
+        <ul class="browser-default">
+          <li>
+            Criação de uma interface gráfica(ex. WebPage/JavaSwing/MobileApp);
+          </li>
+          <li>
+            Manter a legibilidade do url criado;
+          </li>
+          <li>
+            Permitir a selecao de determinados caracteres a serem introduzidos no url.
+          </li>
+          <li>
+            Opção de atualização de url, mantendo o mesmo token;
+          </li>
+          <li>
+            Criar estatísticas métricas mais avançadas (KPI);
+          </li>
+          <li>
+            Implementação de uma base de dados.
+          </li>
+        </ul>
+        <p class="text-justify">
+          Para além das demais opções dadas como opcionais, poderás implementar
+          outras que aches relevantes e funcionais para o tipo de projeto pedido. A
+          criatividade faz parte do elemento de avaliação e como tal, nada será
+          excluído.
+        </p>
+        <p>
+          Adicionando à pontuação apresentada acima, existem ainda estes critérios:
+        </p>
+        <ul class="browser-default">
+          <li>Compilação sem erros; <b>(5 pontos)</b></li>
+          <li>Programa corre sem Runtime Error; <b>(15 pontos)</b></li>
+          <li>Documentação técnica; <b>(10 pontos)</b></li>
+          <li>Criação de testes; <b>(10 pontos)</b></li>
+          <ul class="browser-default">
+            <li>
+              Os testes terão de ser objetivos e abrangir todas as funcionalidades
+              operacionais.
+            </li>
+          </ul>
+          <li>Qualidade de código. <b>(10 pontos)</b></li>
+        </ul>
+        <p>Teconolgias sugeridas:</p>
+        <ul class="browser-default">
+          <li>Backend:</li>
+          <ul class="browser-default">
+            <li>Java - Springboot, Micronaut, Quark</li>
+            <li>Node - Express, nextJS, emberJS</li>
+            <li>.Net</li>
+            <li>C/C++</li>
+            <li>Python - Django, Flask</li>
+          </ul>
+          <li>Frontend:</li>
+          <ul class="browser-default">
+            <li>Vanilla JS/HTML/CSS</li>
+            <li>MVC</li>
+            <li>Angular</li>
+            <li>React</li>
+            <li>Vue</li>
+            <li>Svelt</li>
+          </ul>
+        </ul>

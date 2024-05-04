@@ -1,0 +1,332 @@
+- model: groups.Group
+  pk: 1
+  fields:
+    name: Pepperoni Powet
+    number: 1
+    password: gh5dzbxv
+
+- model: groups.Student
+  pk: null
+  fields:
+    name: Miguel Santos
+    group: 1
+
+
+- model: groups.Group
+  pk: 2
+  fields:
+    name: NunoDEV
+    number: 2
+    password: 7Z26cdxk
+
+- model: groups.Student
+  pk: null
+  fields:
+    name: Nuno Miguel Gonçalves Pereira Matos Martins
+    group: 2
+
+
+- model: groups.Group
+  pk: 3
+  fields:
+    name: Social_Enjoyers
+    number: 3
+    password: my9WV69m
+
+- model: groups.Student
+  pk: null
+  fields:
+    name: Sara Rijo Pinheiro
+    group: 3
+
+- model: groups.Student
+  pk: null
+  fields:
+    name: Francisco Salgueiro
+    group: 3
+
+- model: groups.Student
+  pk: null
+  fields:
+    name: Tomás Teixeira
+    group: 3
+
+
+- model: groups.Group
+  pk: 4
+  fields:
+    name: Barquinho
+    number: 4
+    password: 2fKNPerK
+
+- model: groups.Student
+  pk: null
+  fields:
+    name: Gonçalo Fernandes
+    group: 4
+
+- model: groups.Student
+  pk: null
+  fields:
+    name: João Amoroso
+    group: 4
+
+
+- model: groups.Group
+  pk: 5
+  fields:
+    name: 2PES
+    number: 5
+    password: wacwxVMj
+
+- model: groups.Student
+  pk: null
+  fields:
+    name: Sofia Romeiro
+    group: 5
+
+- model: groups.Student
+  pk: null
+  fields:
+    name: Pedro Chaparro
+    group: 5
+
+- model: groups.Student
+  pk: null
+  fields:
+    name: Edson da Veiga
+    group: 5
+
+- model: groups.Student
+  pk: null
+  fields:
+    name: Pedro Claro
+    group: 5
+
+
+- model: groups.Group
+  pk: 6
+  fields:
+    name: Girafas de Plasticina
+    number: 6
+    password: mZvGF5nj
+
+- model: groups.Student
+  pk: null
+  fields:
+    name: Estêvão Gomes
+    group: 6
+
+- model: groups.Student
+  pk: null
+  fields:
+    name: Pedro Curvo
+    group: 6
+
+- model: groups.Student
+  pk: null
+  fields:
+    name: André Morais
+    group: 6
+
+
+- model: groups.Group
+  pk: 7
+  fields:
+    name: Big Brain Time
+    number: 7
+    password: QMd72FP9
+
+- model: groups.Student
+  pk: null
+  fields:
+    name: David Pires
+    group: 7
+
+- model: groups.Student
+  pk: null
+  fields:
+    name: Diogo Miranda
+    group: 7
+
+- model: groups.Student
+  pk: null
+  fields:
+    name: Henrique Costa
+    group: 7
+
+
+- model: groups.Group
+  pk: 8
+  fields:
+    name: Segmentation Fault
+    number: 8
+    password: NL7n6JDq
+
+- model: groups.Student
+  pk: null
+  fields:
+    name: João Cruz
+    group: 8
+
+
+- model: groups.Group
+  pk: 9
+  fields:
+    name: Python goes b' + 'r' * 10
+    number: 9
+    password: Em6hF6Nk
+
+- model: groups.Student
+  pk: null
+  fields:
+    name: Bernardo Jordão
+    group: 9
+
+- model: groups.Student
+  pk: null
+  fields:
+    name: Micael Afonso
+    group: 9
+
+- model: groups.Student
+  pk: null
+  fields:
+    name: João Bernardo
+    group: 9
+
+
+- model: groups.Group
+  pk: 10
+  fields:
+    name: Caranguejos
+    number: 10
+    password: Db6wVfTH
+
+- model: groups.Student
+  pk: null
+  fields:
+    name: Alexandre Duarte
+    group: 10
+
+- model: groups.Student
+  pk: null
+  fields:
+    name: David Nunes
+    group: 10
+
+- model: groups.Student
+  pk: null
+  fields:
+    name: André Santos
+    group: 10
+
+- model: groups.Student
+  pk: null
+  fields:
+    name: Salvador Correia
+    group: 10
+
+
+- model: groups.Group
+  pk: 11
+  fields:
+    name: Saucy Goats
+    number: 11
+    password: NEG376Hb
+
+- model: groups.Student
+  pk: null
+  fields:
+    name: André Ribeiro
+    group: 11
+
+- model: groups.Student
+  pk: null
+  fields:
+    name: Lourenço Mourão
+    group: 11
+
+- model: groups.Student
+  pk: null
+  fields:
+    name: João Caldeira
+    group: 11
+
+
+- model: groups.Group
+  pk: 12
+  fields:
+    name: King Size
+    number: 12
+    password: pmXKUUPn
+
+- model: groups.Student
+  pk: null
+  fields:
+    name: Rafael Duarte Vaz
+    group: 12
+
+
+- model: groups.Group
+  pk: 13
+  fields:
+    name: Maltrapilhos
+    number: 13
+    password: p2nRLSVR
+
+- model: groups.Student
+  pk: null
+  fields:
+    name: Duarte Elvas
+    group: 13
+
+- model: groups.Student
+  pk: null
+  fields:
+    name: Afonso Almeida
+    group: 13
+
+- model: groups.Student
+  pk: null
+  fields:
+    name: Nuno Dendas
+    group: 13
+
+- model: groups.Student
+  pk: null
+  fields:
+    name: Alexandre Corte
+    group: 13
+
+
+- model: groups.Group
+  pk: 14
+  fields:
+    name: "0x455A"
+    number: 14
+    password: nRQ9BbPL
+
+- model: groups.Student
+  pk: null
+  fields:
+    name: Rafael Branco
+    group: 14
+
+- model: groups.Student
+  pk: null
+  fields:
+    name: Tomás Cayatte
+    group: 14
+
+- model: groups.Student
+  pk: null
+  fields:
+    name: José Eduardo Sapina Teixeira Brás
+    group: 14
+
+- model: groups.Student
+  pk: null
+  fields:
+    name: Diogo Sá
+    group: 14

@@ -1,0 +1,49 @@
+{% extends 'admin/change_list.html' %}
+
+{% block object-tools %}
+  <style>
+    .container {
+      display: block;
+      height: 110px;
+    }
+    .action-btn {
+      background-color: var(--accent);
+      width: 10%;
+      height: 60px;
+      margin: 10px;
+      float: left;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  </style>
+
+  <div class="container">
+    <h4>Actions</h4>
+    <form action="set_leet_active/" method="POST">
+      {% csrf_token %}
+      <button class="action-btn" type="submit">
+        Activate all Leet Challenges
+      </button>
+    </form>
+    <form action="set_leet_inactive/" method="POST">
+      {% csrf_token %}
+      <button class="action-btn" type="submit">
+        Deactivate all Leet Challenges
+      </button>
+    </form>
+    <form action="set_project_active/" method="POST">
+      {% csrf_token %}
+      <button class="action-btn" type="submit">
+        Activate all Project Challenges
+      </button>
+    </form>
+    <form action="set_project_inactive/" method="POST">
+      {% csrf_token %}
+      <button class="action-btn" type="submit">
+        Deactivate all Project Challenges
+      </button>
+    </form>
+  </div>
+  <br />
+  {{ block.super }}
+{% endblock %}

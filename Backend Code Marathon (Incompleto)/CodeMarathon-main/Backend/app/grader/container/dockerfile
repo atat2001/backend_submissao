@@ -1,0 +1,7 @@
+FROM python:3.10-alpine
+LABEL maintainer PedroPerpetua
+
+ENV PYTHONBUFFERED 1
+
+COPY ./app /app
+WORKDIR /app
